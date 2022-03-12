@@ -1,5 +1,6 @@
 const express = require('express');
 const { animals } = require('./data/animals');
+const PORT = process.env.PORT || 3001;
 
 
 // assigned express.js to the variable express
@@ -58,7 +59,7 @@ app.get('/api/animals', (req, res) => {
 });
   
 // this is telling the app where to go 
-app.listen(3301, () => {
-    console.log(`API server now on port 3001!`);
-});
+app.listen(PORT, () => {
+    console.log(`API server now on port ${PORT}!`);
+  });
 
